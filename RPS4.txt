@@ -39,10 +39,10 @@ void determine_winner_and_update_scorecard(
       (player_choice == "R" && computer_choice == "S") ||
       (player_choice == "P" && computer_choice == "R") ||
       (player_choice == "S" && computer_choice == "P")) {
-    cout << "You win!\n\nPress 0 to EXIT else," << endl;
+    cout << "You win!" << endl;
     player_score += 2;
   } else {
-    cout << "Computer wins!\n\nPress 0 to EXIT else," << endl;
+    cout << "Computer wins!" << endl;
     computer_score += 2;
   }
 }
@@ -55,6 +55,8 @@ int main() {
   int computer_score = 0;
 
   bool play_again = true;
+  cout << "Welcome to the classic ROCK, PAPERS, SCISSORS !!\n\nValid Inputs;\nFor, \tChoosing Rock: [ROCK, Rock, rock, R, r]\n\tChoosing Paper: [PAPER, Paper, paper, P, p]\n\tChoosing Scissors: [SCISSORS, Scissors, scissors, S, s]";
+  cout << "\nLet's Enjoy!\n\n";
   while (play_again) {
     // Get the player's choice.
     string player_choice;
@@ -67,6 +69,7 @@ int main() {
     // Check if the player wants to exit the game.
     if (player_choice == "0") {
       play_again = false;
+      cout << "Game Ended!\nFinal ";
     } else {
       // Get the computer's choice.
       int computer_choice_number = rand() % NUM_CHOICES;
@@ -82,7 +85,7 @@ int main() {
     }
 
     // Display the scorecard.
-    cout << "Score: \nPlayer " << player_score << "\nComputer: " << computer_score
+    cout << "Score: \n|| Player " << player_score << " || Computer: " << computer_score << " ||"
          << endl;
   }
 
