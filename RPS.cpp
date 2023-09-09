@@ -55,12 +55,13 @@ int main() {
   int computer_score = 0;
 
   bool play_again = true;
-  cout << "Welcome to the classic ROCK, PAPERS, SCISSORS !!\n\nValid Inputs;\nFor, \tChoosing Rock: [ROCK, Rock, rock, R, r]\n\tChoosing Paper: [PAPER, Paper, paper, P, p]\n\tChoosing Scissors: [SCISSORS, Scissors, scissors, S, s]";
+  cout << "Welcome to the classic ROCK, PAPERS, SCISSORS !!";
+  cout << "Enter choices [R], [P], [S] to play.\nPress [0] to EXIT.";
   cout << "\nLet's Enjoy!\n\n";
   while (play_again) {
     // Get the player's choice.
     string player_choice;
-    cout << "\nEnter your choice (R, P, S): ";
+    cout << "\nEnter your choice (Rock[R], Paper[P], Scissors[S]): ";
     cin >> player_choice;
 
     // Convert the player's choice to uppercase.
